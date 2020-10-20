@@ -1,6 +1,6 @@
 # Reparameterizable Subset Sampling via Continuous Relaxations
 
-This repo contains the code for the paper [Reparameterizable Subset Sampling via Continuous Relaxations]{https://arxiv.org/abs/1901.10517},
+This repo contains the code for the paper [Reparameterizable Subset Sampling via Continuous Relaxations](https://arxiv.org/abs/1901.10517),
 which allows you to include subset sampling as a layer in a neural network.
 This is useful whenever you want to select a discrete number of elements, such as in
 dynamic feature selection or k-nearest neighbors.
