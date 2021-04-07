@@ -74,8 +74,12 @@ class SubsetOperator(torch.nn.Module):
             khot = khot + onehot_approx
 
         if self.hard:
+            # will do straight through estimation if training
             khot_hard = torch.zeros_like(khot)
             val, ind = torch.topk(khot, self.k, dim=1)
-            khot = khot_hard.index_fill_(0, ind, 1)
+            khot_hard = khot_hard.scatter_(1, ind, 1)
+            res = khot_hard - khot.detach() + khot
+        else:
+            res = khot
 
-        return khot
+        return res
