@@ -2,9 +2,12 @@
 export PATH="$PATH:/usr/local/cuda-9.0/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64"
 
+set -x
+
 pwd; hostname; date
 
 cd ../subsets/L2X/imdb_word/
+mkdir -p data
 
 python explain.py --train --task original
 

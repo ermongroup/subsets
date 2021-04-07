@@ -1,4 +1,7 @@
 #!/bin/sh
+
+set -x
+
 cd ../subsets/tsne/
 
 for out_dim in 2 10 30

@@ -13,7 +13,7 @@ def gumbel_keys(w):
         tf.shape(w),
         minval=EPSILON,
         maxval=1.0)
-    z = tf.log(-tf.log(uniform))
+    z = -tf.log(-tf.log(uniform))
     w = w + z
     return w
 
