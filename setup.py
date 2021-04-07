@@ -8,7 +8,7 @@ setup(name='subsets',
       author_email='xie@cs.stanford.edu',
       packages=find_packages(),
       install_requires=[
-        'tensorflow-gpu==1.15',
+        'tensorflow-gpu==2.4.0',
         'matplotlib',
         'numpy',
         'pandas',
